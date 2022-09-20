@@ -1,5 +1,5 @@
 {
-    "project_name": "My Awesome Project",
+    "project_name": "My Awesome Plugin",
     "project_slug": "{{ cookiecutter.project_name | slugify }}",
     "project_namespace": "{{ cookiecutter.project_name | slugify | title | replace( '-', '' ) }}",
     "project_description" : "",
