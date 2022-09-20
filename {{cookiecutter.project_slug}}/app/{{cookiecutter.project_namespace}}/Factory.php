@@ -27,7 +27,7 @@ class Factory {
 	 */
 	public function createCliCommands() {
 		if ( ! self::$cliCommands ) {
-			self::$cliCommands = new CliCommands( $this->createPeoplePostType() );
+			self::$cliCommands = new CliCommands();
 		}
 		return self::$cliCommands;
 	}
