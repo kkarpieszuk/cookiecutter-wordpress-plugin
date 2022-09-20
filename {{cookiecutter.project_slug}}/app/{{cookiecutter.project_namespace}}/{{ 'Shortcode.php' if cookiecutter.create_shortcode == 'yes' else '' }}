@@ -15,7 +15,7 @@ class Shortcode {
      * @since {{cookiecutter.project_version}}
      */
 	public function registerShortcode() {
-        \add_shortcode( '{{cookiecutter.project_namespace}}', [ $this, 'shortcodeCallback' ] );
+        \add_shortcode( '{{ cookiecutter.project_slug_under }}', [ $this, 'shortcodeCallback' ] );
     }
 
     /**
