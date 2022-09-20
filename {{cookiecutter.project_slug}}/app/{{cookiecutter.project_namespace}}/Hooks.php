@@ -2,19 +2,36 @@
 
 namespace {{cookiecutter.project_namespace}};
 
+/**
+ * Hooks class.
+ * 
+ * @since {{cookiecutter.project_version}}
+ */
 class Hooks {
+
 	/**
+	 * @since {{cookiecutter.project_version}}
+	 * 
 	 * @var Factory
 	 */
 	private $factory;
 
 	/**
+	 * Class constructor.
+	 * 
+	 * @since {{cookiecutter.project_version}}
+	 * 
 	 * @param Factory $factory
 	 */
 	public function __construct( Factory $factory ) {
 		$this->factory = $factory;
 	}
 
+	/**
+	 * Register hooks.
+	 * 
+	 * @since {{cookiecutter.project_version}}
+	 */
 	public function registerHooks() {
 		\add_action( 'init', [ $this->factory->createShortcode(), 'registerShortcode' ], 11 );
 
@@ -28,5 +45,4 @@ class Hooks {
 		}
 {% endif %}
 	}
-
 }

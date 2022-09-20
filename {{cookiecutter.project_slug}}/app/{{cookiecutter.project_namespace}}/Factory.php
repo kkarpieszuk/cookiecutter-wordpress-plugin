@@ -2,27 +2,42 @@
 
 namespace {{cookiecutter.project_namespace}};
 
+/**
+ * Factory class.
+ * 
+ * @since {{cookiecutter.project_version}}
+ */
 class Factory {
 
 {% if cookiecutter.create_wp_cli == 'yes' %}
 	/**
+	 * @since {{cookiecutter.project_version}}
+	 * 
 	 * @var CliCommands|null
 	 */
 	private static $cliCommands;
 {% endif %}
 
 	/**
+	 * @since {{cookiecutter.project_version}}
+	 * 
 	 * @var Shortcode|null
 	 */
 	private static $shortcode;
 
 	/**
+	 * @since {{cookiecutter.project_version}}
+	 * 
 	 * @var Ajax|null
 	 */
 	private static $ajax;
 
 {% if cookiecutter.create_wp_cli == 'yes' %}
 	/**
+	 * Create CLICommand instance.
+	 * 
+	 * @since {{cookiecutter.project_version}}
+	 * 
 	 * @return CliCommands
 	 */
 	public function createCliCommands() {
@@ -34,6 +49,10 @@ class Factory {
 {% endif %}
 
 	/**
+	 * Create Ajax instance.
+	 * 
+	 * @since {{cookiecutter.project_version}}
+	 * 
 	 * @return Ajax
 	 */
 	public function createAjax() {
@@ -44,6 +63,10 @@ class Factory {
 	}
 
 	/**
+	 * Create Shortcode instance.
+	 * 
+	 * @since {{cookiecutter.project_version}}
+	 * 
 	 * @return Shortcode
 	 */
 	public function createShortcode() {

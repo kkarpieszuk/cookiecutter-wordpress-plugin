@@ -2,12 +2,27 @@
 
 namespace {{cookiecutter.project_namespace}};
 
+/**
+ * CLICommands class.
+ * 
+ * @since {{cookiecutter.project_version}}
+ */
 class CliCommands {
 
+    /**
+     * Register commands.
+     * 
+     * @since {{cookiecutter.project_version}}
+     */
     public function registerCommands() {
         \WP_CLI::add_command( '{{cookiecutter.project_namespace | lower}}', $this );
     }
 
+    /**
+     * Register 'run' method.
+     * 
+     * @since {{cookiecutter.project_version}}
+     */
     public function run() {
         \WP_CLI::success( __( "It runs!", '{{cookiecutter.project_namespace}}' ) );
     }
