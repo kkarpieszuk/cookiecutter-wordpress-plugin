@@ -18,12 +18,14 @@ class Factory {
 	private static $cliCommands;
 {% endif %}
 
+{% if cookiecutter.create_shortcode == 'yes' %}
 	/**
 	 * @since {{cookiecutter.project_version}}
 	 * 
 	 * @var Shortcode|null
 	 */
 	private static $shortcode;
+{% endif %}
 
 	/**
 	 * @since {{cookiecutter.project_version}}
@@ -48,20 +50,7 @@ class Factory {
 	}
 {% endif %}
 
-	/**
-	 * Create Ajax instance.
-	 * 
-	 * @since {{cookiecutter.project_version}}
-	 * 
-	 * @return Ajax
-	 */
-	public function createAjax() {
-		if ( ! self::$ajax ) {
-			self::$ajax = new Ajax();
-		}
-		return self::$ajax;
-	}
-
+{% if cookiecutter.create_shortcode == 'yes' %}
 	/**
 	 * Create Shortcode instance.
 	 * 
@@ -74,5 +63,20 @@ class Factory {
 			self::$shortcode = new Shortcode();
 		}
 		return self::$shortcode;
+	}
+{% endif %}
+
+	/**
+	 * Create Ajax instance.
+	 * 
+	 * @since {{cookiecutter.project_version}}
+	 * 
+	 * @return Ajax
+	 */
+	public function createAjax() {
+		if ( ! self::$ajax ) {
+			self::$ajax = new Ajax();
+		}
+		return self::$ajax;
 	}
 }
