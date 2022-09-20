@@ -22,10 +22,11 @@ class Hooks {
 		\add_action( 'wp_ajax_fetch_{{cookiecutter.project_namespace}}_ajax', [ $this->factory->createAjax(), 'fetchForAjax' ] );
 		\add_action( 'wp_ajax_nopriv_fetch_{{cookiecutter.project_namespace}}_ajax', [ $this->factory->createAjax(), 'fetchForAjax' ] );
 
-
+{% if cookiecutter.create_wp_cli == 'yes' %}
 		if ( defined( 'WP_CLI' ) && WP_CLI ) {
 			\add_action( 'cli_init', [ $this->factory->createCliCommands(), 'registerCommands' ] );
 		}
+{% endif %}
 	}
 
 }
