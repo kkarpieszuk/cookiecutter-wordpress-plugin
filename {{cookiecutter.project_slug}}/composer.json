@@ -1,0 +1,19 @@
+{
+    "name": "{{cookiecutter.project_author}}/{{cookiecutter.project_slug}}",
+    "description": "{{cookiecutter.project_description}}",
+    "type": "project",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "{{cookiecutter.project_author}}",
+            "email": "{{cookiecutter.project_author_email}}"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "{{cookiecutter.project_namespace}}\\": "app/{{cookiecutter.project_namespace}}"
+        }
+    }
+}

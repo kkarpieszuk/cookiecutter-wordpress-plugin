@@ -1,0 +1,9 @@
+{
+    "project_name": "My Awesome Project",
+    "project_slug": "{{ cookiecutter.project_name | slugify }}",
+    "project_namespace": "{{ cookiecutter.project_name | slugify | title | replace( '-', '' ) }}",
+    "project_description" : "",
+    "project_author" : "",
+    "project_author_email" : "",
+    "project_version" : "0.1"
+}
