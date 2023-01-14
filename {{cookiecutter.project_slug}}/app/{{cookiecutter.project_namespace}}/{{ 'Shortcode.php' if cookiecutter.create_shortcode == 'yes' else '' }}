@@ -34,6 +34,6 @@ class Shortcode {
      * @since {{cookiecutter.project_version}}
      */
 	public function shortcode_callback() {
-        \printf( '<div class="{{cookiecutter.project_namespace}}-shortcode">%s</div>', __( 'It comes from {{cookiecutter.project_name}} plugin...', '{{cookiecutter.project_namespace}}' ) );
+        return \sprintf( '<div class="{{cookiecutter.project_namespace}}-shortcode">%s</div>', __( 'It comes from {{cookiecutter.project_name}} plugin...', '{{cookiecutter.project_namespace}}' ) );
     }
 }
