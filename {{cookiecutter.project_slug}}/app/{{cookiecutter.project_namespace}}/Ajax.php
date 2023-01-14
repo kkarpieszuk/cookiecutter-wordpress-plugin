@@ -8,6 +8,18 @@ namespace {{cookiecutter.project_namespace}};
  * @since {{cookiecutter.project_version}}
  */
 class Ajax {
+
+	/** 
+	 * Register hooks.
+	 * 
+	 * @since {{cookiecutter.project_version}}
+	 */
+	public function register_hooks() {
+
+		\add_action( 'wp_enqueue_scripts', [ $this, 'enqueue' ] );
+		\add_action( 'wp_ajax_fetch_{{cookiecutter.project_namespace}}_ajax', [ $this, 'fetch_for_ajax' ] );
+		\add_action( 'wp_ajax_nopriv_fetch_{{cookiecutter.project_namespace}}_ajax', [ $this, 'fetch_for_ajax' ] );
+	}
 	
 	/**
 	 * Enqueue and localize scripts.

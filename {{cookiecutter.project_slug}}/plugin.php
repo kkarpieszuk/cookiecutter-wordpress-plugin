@@ -12,4 +12,4 @@ use {{cookiecutter.project_namespace}}\Hooks;
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/constants.php';
 
-( new Hooks( new Factory() ) )->register_hooks();
+( new Hooks() )->register_hooks();

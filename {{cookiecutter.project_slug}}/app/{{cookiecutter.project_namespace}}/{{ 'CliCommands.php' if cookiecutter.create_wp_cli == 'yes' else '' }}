@@ -9,6 +9,18 @@ namespace {{cookiecutter.project_namespace}};
  */
 class CliCommands {
 
+    /** 
+     * Register hooks.
+     * 
+     * @since {{cookiecutter.project_version}}
+     */
+    public function register_hooks() {
+
+        if ( defined( 'WP_CLI' ) && WP_CLI ) {
+            \add_action( 'cli_init', [ $this->factory->create_cli_commands(), 'register_commands' ] );
+        }
+    }
+
     /**
      * Register commands.
      * 

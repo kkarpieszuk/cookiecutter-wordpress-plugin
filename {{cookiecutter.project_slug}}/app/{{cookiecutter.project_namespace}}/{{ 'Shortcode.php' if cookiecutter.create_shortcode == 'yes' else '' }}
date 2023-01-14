@@ -9,6 +9,16 @@ namespace {{cookiecutter.project_namespace}};
  */
 class Shortcode {
 
+    /** 
+     * Register hooks.
+     * 
+     * @since {{cookiecutter.project_version}}
+     */
+    public function register_hooks() {
+
+        \add_action( 'init', [ $this, 'register_shortcode' ], 11 );
+    }
+
     /**
      * Register shortcode.
      * 
