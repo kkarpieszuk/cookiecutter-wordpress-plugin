@@ -14,7 +14,7 @@ class CliCommands {
      * 
      * @since {{cookiecutter.project_version}}
      */
-    public function registerCommands() {
+    public function register_commands() {
         \WP_CLI::add_command( '{{cookiecutter.project_namespace | lower}}', $this );
     }
 

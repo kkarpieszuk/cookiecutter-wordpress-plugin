@@ -11,4 +11,4 @@ use {{cookiecutter.project_namespace}}\Hooks;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-new Hooks( new Factory() )->registerHooks();
+new Hooks( new Factory() )->register_hooks();

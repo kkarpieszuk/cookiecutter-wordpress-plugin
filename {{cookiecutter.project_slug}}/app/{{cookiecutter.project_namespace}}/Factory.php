@@ -42,7 +42,7 @@ class Factory {
 	 * 
 	 * @return CliCommands
 	 */
-	public function createCliCommands() {
+	public function create_cli_commands() {
 		if ( ! self::$cliCommands ) {
 			self::$cliCommands = new CliCommands();
 		}
@@ -58,7 +58,7 @@ class Factory {
 	 * 
 	 * @return Shortcode
 	 */
-	public function createShortcode() {
+	public function create_shortcode() {
 		if ( ! self::$shortcode ) {
 			self::$shortcode = new Shortcode();
 		}
@@ -73,7 +73,7 @@ class Factory {
 	 * 
 	 * @return Ajax
 	 */
-	public function createAjax() {
+	public function create_ajax() {
 		if ( ! self::$ajax ) {
 			self::$ajax = new Ajax();
 		}

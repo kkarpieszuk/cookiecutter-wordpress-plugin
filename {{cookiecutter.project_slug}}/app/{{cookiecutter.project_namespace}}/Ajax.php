@@ -27,7 +27,7 @@ class Ajax {
 	 * 
 	 * @since {{cookiecutter.project_version}}
 	 */
-	public function fetchForAjax() {
+	public function fetch_for_ajax() {
 		
 		\wp_send_json( '' );
 	}

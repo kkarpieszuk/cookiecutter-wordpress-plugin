@@ -14,8 +14,8 @@ class Shortcode {
      * 
      * @since {{cookiecutter.project_version}}
      */
-	public function registerShortcode() {
-        \add_shortcode( '{{ cookiecutter.project_slug_under }}', [ $this, 'shortcodeCallback' ] );
+	public function register_shortcode() {
+        \add_shortcode( '{{ cookiecutter.project_slug_under }}', [ $this, 'shortcode_callback' ] );
     }
 
     /**
@@ -23,7 +23,7 @@ class Shortcode {
      * 
      * @since {{cookiecutter.project_version}}
      */
-	public function shortcodeCallback() {
+	public function shortcode_callback() {
         \printf( '<div class="{{cookiecutter.project_namespace}}-shortcode">%s</div>', __( 'It comes from {{cookiecutter.project_name}} plugin...', '{{cookiecutter.project_namespace}}' ) );
     }
 }
