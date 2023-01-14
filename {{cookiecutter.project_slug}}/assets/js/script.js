@@ -4,9 +4,7 @@ jQuery(document).ready( function($) {
       {{cookiecutter.project_namespace}}_data.ajax_url,
       { 'action': 'fetch_{{cookiecutter.project_namespace}}_ajax' },
       function( response ) {
-          jQuery.each( response, function() {
-            
-          });
+          console.log(response);
         } 
       )
 } );
