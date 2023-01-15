@@ -6,6 +6,7 @@
     "project_description" : "",
     "project_author" : "",
     "project_author_email" : "",
+    "project_author_nickname": "{{ cookiecutter.project_author_email.split('@')[0] }}",
     "project_version" : "0.1",
     "create_wp_cli": [ "yes", "no" ],
     "create_shortcode": [ "yes", "no" ]
