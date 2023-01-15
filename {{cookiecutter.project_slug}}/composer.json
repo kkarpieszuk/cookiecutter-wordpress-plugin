@@ -1,5 +1,5 @@
 {
-    "name": "{{cookiecutter.project_author}}/{{cookiecutter.project_slug}}",
+    "name": "{{cookiecutter.project_author | slugify}}/{{cookiecutter.project_slug}}",
     "description": "{{cookiecutter.project_description}}",
     "type": "project",
     "license": "BSD",
